@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Sign up - Moreish </title>
+	<title> Log in - Moreish </title>
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
-	<link rel = 'stylesheet' href = '../styles/general-styles.css'>
-	<link rel = 'stylesheet' href = '../styles/logsign-styles.css'>
+	<link rel = 'stylesheet' href = '../assets/css/general-styles.css'>
+	<link rel = 'stylesheet' href = '../assets/css/logsign-styles.css'>
 </head>
 
 <body>
