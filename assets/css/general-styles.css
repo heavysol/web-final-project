@@ -2,7 +2,7 @@
 
 /* General elements */
 body {
-	background-color: #f5deb3;
+	background-color: black;
 	font-family: Calibri, sans-serif;
 }
 
@@ -15,9 +15,10 @@ a {
 	position: sticky;
 	top: 0;
 	width: 100%;
-	background-color: #d2b48c;
+	background-color: #b745e4;
 	overflow: visible;
 	z-index: 1;
+	border-radius: 25px;
 }
 
 .navbar-right { /* To align the login and signup buttons in the navbar to the right */
@@ -25,23 +26,26 @@ a {
 }
 
 .nav-op { /* Home, login and signup button in navbar */
-	font-size: 24pt;
-	color: white;
+	font-size: 6vw;
+	color: black;
 	height: inherit;
 	vertical-align: middle;
 }
 
 .nav-op:hover {
-	background-color: #ab7e4c;
+	background-color: #8b4cab;
 }
 
 .app-logo-nav {
-	width: 120pt;
+	position: sticky;
+	left: 2;
+	width: 8%;
 	height: /*32pt*/ inherit;
 }
 
 .app-logo-nav:hover {
-	filter: invert(18%) sepia(58%) saturate(684%) hue-rotate(352deg) brightness(96%) contrast(101%);
+	background-color: #8b4cab;
+	/*filter: invert(18%) sepia(58%) saturate(684%) hue-rotate(352deg) brightness(96%) contrast(101%);*/
 }
 
 /* Footer styles */
