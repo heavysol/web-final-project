@@ -1,0 +1,54 @@
+/* Created on 14 Sep '24 */
+
+/* General elements */
+body {
+	background-color: #f5deb3;
+	font-family: Calibri, sans-serif;
+}
+
+a {
+	text-decoration-line: none;
+}
+
+/* Navbar styles */
+.navbar {
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background-color: #d2b48c;
+	overflow: visible;
+	z-index: 1;
+}
+
+.navbar-right { /* To align the login and signup buttons in the navbar to the right */
+	float: right;
+}
+
+.nav-op { /* Home, login and signup button in navbar */
+	font-size: 24pt;
+	color: white;
+	height: inherit;
+	vertical-align: middle;
+}
+
+.nav-op:hover {
+	background-color: #ab7e4c;
+}
+
+.app-logo-nav {
+	width: 120pt;
+	height: /*32pt*/ inherit;
+}
+
+.app-logo-nav:hover {
+	filter: invert(18%) sepia(58%) saturate(684%) hue-rotate(352deg) brightness(96%) contrast(101%);
+}
+
+/* Footer styles */
+footer {
+	position: relative;
+	width: 100%;
+	height: 20%;
+	background-color: black;
+	color: white;
+}

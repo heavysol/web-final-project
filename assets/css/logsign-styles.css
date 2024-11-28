@@ -1,0 +1,86 @@
+/* Created on 23 Sep '24 */
+
+/* Log in and sign up table */
+.logsign {
+	margin: auto;
+	position: relative;
+	top: 30vh;
+	width: 50%;
+	height: 50%;
+	background-color: #ffebcd;
+	border-collapse: collapse;
+	border-radius: 25px;
+}
+
+.logsign a { /* Anchors in logsign */
+	font-size: 18pt;
+	color: #d2b48c;
+	text-align: center;
+	border-radius: 25px;
+}
+
+.logsign-upper-text { /* Login and signup toggle buttons */
+	text-align: center;
+	padding-top: 0.05px;
+	padding-bottom: 0.05px;
+}
+
+.logsign-upper-text-hover:hover {
+	color: white;
+}
+
+.logsign-upper-text-backg { /* Toggle button background */
+	background-color: #f3ebad;
+}
+
+.logsign-upper-text-backg:hover {
+	background-color: #ab7e4c;
+	color: white;
+}
+
+.logsign-upper-text-left { /* For login toggle button */
+	border-radius: 25px 0px 0px 0px;
+}
+
+.logsign-upper-text-right { /* For signup toggle button */
+	border-radius: 0px 25px 0px 0px;
+}
+
+/* Input form */
+.logsign-field { /* For input fields */
+	position: relative;
+	left: 5vw;
+	padding: 5px;
+}
+
+#logsign-form { /* For login form input fields and button */
+	font-size: 16pt;
+	text-align: left;
+}
+
+#uname, #passw, #passw-confirm, #emaila {
+	font-size: 14pt;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	width: 75%;
+	height: 30px;
+}
+
+#submit-login { /* For submit button */
+	margin-top: 5px;
+	position: relative;
+	left: 19.5vw;
+	padding: 5px;
+	width: 20%;
+	background-color: #d2b48c;
+	color: white;
+	font-size: 16pt;
+	overflow: clip;
+	border-style: none;
+	border-radius: 25px;
+}
+
+#submit-login:hover {
+	background-color: #ab7e4c;
+	cursor: pointer;
+}
