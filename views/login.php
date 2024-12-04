@@ -9,18 +9,9 @@
 
 <body>
 	<!-- Navbar -->
-	<div class = 'navbar'>
-		<a href = '../index.php'> <img src = '../assets/images/logo.png' alt = 'Moreish logo' class = 'app-logo-nav'> </a>
-		<div class = 'navbar-right'>
-			<a class = 'nav-op' href = 'login.php'> Log in </a>
-			<a class = 'nav-op' href = 'signup.php'> Sign up </a>
-		</div>
+	<div class = 'screen'>
+		salut
 	</div>
-
-	<!-- Log in/Sign up form -->
-	
-
-	<!-- Actual input form -->
 		
 
 	<footer>
