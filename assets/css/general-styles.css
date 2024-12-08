@@ -11,6 +11,9 @@ body {
 	height: 50vh;
 }
 
+.logo {
+	margin: auto;
+}
 /* Navbar styles */
 /*.screen {
 	position: sticky;
