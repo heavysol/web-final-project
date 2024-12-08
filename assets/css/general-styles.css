@@ -1,13 +1,17 @@
 /* Created on 14 Sep '24 */
 
 /* General elements */
-body {
+.set-screen-width-height {
+	width: 75%;
+	height: 50vh;
+}
+/*body {
 	background-color: #3a3d4bf6;
 	font-family: Calibri, sans-serif;
-}
+}*/
 
 /* Navbar styles */
-.screen {
+/*.screen {
 	position: sticky;
 	top: 50%;
 	max-width: 90%;
@@ -18,4 +22,4 @@ body {
 	color: white;
 	padding: 2%;
 	margin: auto;
-}
+}*/
