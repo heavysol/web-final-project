@@ -16,7 +16,7 @@
 			<form action = ''>
 				<div>
 					<label for = 'uname' class = 'form-label'> Username </label>
-					<input type = 'text' class = 'form-control' name = 'uname' placeholder = 'Enter username, like apple123' required>
+					<input type = 'text' class = 'form-control' name = 'uname' placeholder = 'Enter username, like apple123' minlength = 1  required>
 				</div>
 
 				<div>
