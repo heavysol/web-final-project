@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Log in - Moreish </title>
+	<title> Log in </title>
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
 	<link rel = 'stylesheet' href = '../assets/css/general-styles.css'>
 	<!--<link rel = 'stylesheet' href = '../assets/css/logsign-styles.css'>-->
@@ -22,16 +22,6 @@
 				<div>
 					<label for = 'passw' class = 'form-label'> Password </label>
 					<input type = 'password' class = 'form-control' name = 'passw' placeholder = 'Enter password' minlength = 8 required>
-				</div>
-
-				<div>
-					<label for = 'passw-con' class = 'form-label'> Confirm password </label>
-					<input type = 'password' class = 'form-control' name = 'passw-con' placeholder = 'Confirm password' minlength = 8 required>
-				</div>
-
-				<div>
-					<label for = 'email' class = 'form-label'> Email </label>
-					<input type = 'email' class = 'form-control' name = 'email' placeholder = 'Enter email address, like jj@gmail.com' required>
 				</div>
 
 				<br> 
