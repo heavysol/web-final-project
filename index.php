@@ -3,15 +3,14 @@
 <head>
 <title> Log in </title>
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
-	<link rel = 'stylesheet' href = '../assets/css/general-styles.css'>
+	<link rel = 'stylesheet' href = './assets/css/general-styles.css'>
 	<!--<link rel = 'stylesheet' href = '../assets/css/logsign-styles.css'>-->
-	<link rel = 'stylesheet' href = '../assets/css/bootstrap-css/bootstrap.min.css'>
+	<link rel = 'stylesheet' href = './assets/css/bootstrap-css/bootstrap.min.css'>
 </head>
  
-<body>
 <body class = 'bg-secondary p-3 text-white'>
 	<!-- Icon -->
-	<img src = '../assets/images/logo.png' alt = 'site logo' class = 'mx-auto d-block'>
+	<img src = './assets/images/logo.png' alt = 'site logo' class = 'mx-auto d-block'>
 
     <!-- Console start light -->
     <div class = 'container '></div>
