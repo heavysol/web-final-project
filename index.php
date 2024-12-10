@@ -26,7 +26,6 @@
 		
 	</footer>
 
-	<!--<script src = '../scripts/logsign-scripts/login-script.js'></script>-->
-	<!-- Created on 14 Sep '24 -->
+	<script src = '../assets/js/index-content.js'></script>
 </body>
 </html>
