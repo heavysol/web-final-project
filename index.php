@@ -18,10 +18,7 @@
 	
 	<!-- Screen -->
 	<div class = 'container p-5 my-5 border border-3 rounded bg-dark'>
-		<section>
-		
-        </section>
-			
+		<div id = 'content'></div>
 	</div>
 		
 
