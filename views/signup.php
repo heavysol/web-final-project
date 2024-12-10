@@ -13,7 +13,7 @@
 	<img src = '../assets/images/logo.png' alt = 'site logo' class = 'mx-auto d-block'>
 	
 	<!-- Screen -->
-	<div class = 'set-screen-width-height container p-5 my-5 border border-3 rounded bg-dark'>
+	<div class = 'container p-5 my-5 border border-3 rounded bg-dark'>
 		<section>
 			<h1> Sign up </h1>
 			<form action = ''>
