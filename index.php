@@ -12,11 +12,15 @@
 <body class = 'bg-secondary p-3 text-white'>
 	<!-- Icon -->
 	<img src = '../assets/images/logo.png' alt = 'site logo' class = 'mx-auto d-block'>
+
+    <!-- Console start light -->
+    <div class = 'container '></div>
 	
 	<!-- Screen -->
 	<div class = 'container p-5 my-5 border border-3 rounded bg-dark'>
 		<section>
-			<h1>  </h1>
+		
+        </section>
 			
 	</div>
 		
