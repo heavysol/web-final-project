@@ -35,13 +35,13 @@
 				<div>
 					<label for = 'email' class = 'form-label'> Email </label>
 					<input type = 'email' class = 'form-control' name = 'email' placeholder = 'Enter email address, like jj@gmail.com' required>
-				</div>
+				</div> 
 
-				<br> 
+				<a href = './login.php' class = 'btn btn-link mx-auto d-block'>Log in if you already have an account</a>
 
-				<a href = './login.php' class = 'btn btn-link'>Log in if you already have an account</a>
+				<br>
 
-				<button class = 'btn btn-light position-absolute start-50 translate-middle-x' name = 'login'> Sign up </button>
+				<button class = 'btn btn-light mx-auto d-block' name = 'login'> Sign up </button>
 			</form>
 	</div>
 		

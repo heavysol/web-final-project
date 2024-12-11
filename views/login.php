@@ -27,11 +27,11 @@
 					<input type = 'password' class = 'form-control' name = 'passw' placeholder = 'Enter password' minlength = 8 required>
 				</div>
 
-				<br> 
+				<a href = './signup.php' class = 'btn btn-link mx-auto d-block'>Sign up if you don't have an account</a>
 
-				<a href = './signup.php' class = 'btn btn-link'>Sign up if you don't have an account</a>
+				<br>
 
-				<button class = 'btn btn-light position-absolute start-50 translate-middle-x' name = 'login'> Log in </button>
+				<button class = 'btn btn-light mx-auto d-block' name = 'login'> Log in </button>
 			</form>
 	</div>
 		
