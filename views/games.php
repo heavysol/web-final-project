@@ -36,15 +36,15 @@
         <br>
 
         <!-- Game list --> 
-        <div class = 'container border rounded border-secondary p-2 w-75'>
+        <a class = 'btn btn-outline-secondary border rounded border-secondary p-2 w-75 mx-auto d-block visible' href = './dont-crash-game.php'>
             <img src = '../assets/images/dont-crash-thumbnail.png' src = "Don't Crash thumbnail"> Don't Crash!
-        </div>
+        </a>
 
         <br>
 
-        <div class = 'container border rounded border-secondary p-2 w-75'>
+        <a class = 'btn btn-outline-secondary border rounded border-secondary p-2 w-75 mx-auto d-block' href = './where-seed-game.php'>
             <img src = '../assets/images/where-seed-thumbnail.png' src = "Where's The Seed thumbnail"> Where's The Seed?
-        </div>
+        </a>
 	</div>
 </body>
 </html>
