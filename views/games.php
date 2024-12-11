@@ -36,14 +36,14 @@
         <br>
 
         <!-- Game list --> 
-        <div class = 'container border rounded border-secondary'>
-            dd
+        <div class = 'container border rounded border-secondary p-2 w-75'>
+            <img src = '../assets/images/dont-crash-thumbnail.png' src = "Don't Crash thumbnail"> Don't Crash!
         </div>
 
         <br>
 
-        <div class = 'container border rounded border-secondary'>
-            ee
+        <div class = 'container border rounded border-secondary p-2 w-75'>
+            <img src = '../assets/images/where-seed-thumbnail.png' src = "Where's The Seed thumbnail"> Where's The Seed?
         </div>
 	</div>
 </body>
