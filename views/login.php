@@ -29,6 +29,8 @@
 
 				<br> 
 
+				<a href = './signup.php' class = 'btn btn-link'>Sign up if you don't have an account</a>
+
 				<button class = 'btn btn-light position-absolute start-50 translate-middle-x' name = 'login'> Log in </button>
 			</form>
 	</div>

@@ -39,6 +39,8 @@
 
 				<br> 
 
+				<a href = './login.php' class = 'btn btn-link'>Log in if you already have an account</a>
+
 				<button class = 'btn btn-light position-absolute start-50 translate-middle-x' name = 'login'> Sign up </button>
 			</form>
 	</div>
