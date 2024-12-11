@@ -34,14 +34,6 @@
 				<button class = 'btn btn-light mx-auto d-block' name = 'login'> Log in </button>
 			</form>
 	</div>
-		
-
-	<footer>
-		
-	</footer>
-
-	<!--<script src = '../scripts/logsign-scripts/login-script.js'></script>-->
-	<!-- Created on 14 Sep '24 -->
 </body>
 
 </html>
