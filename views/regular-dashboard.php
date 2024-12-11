@@ -41,7 +41,7 @@
                 <td rowspan = 2>
                     <img src = '../assets/images/dont-crash-thumbnail.png' src = "Don't Crash thumbnail">
                 </td>
-                <td colspan = 2> Don't Crash! </td>
+                <td colspan = 2 class = 'fw-bold'> Don't Crash! </td>
             </tr>
             <tr>
                 <td> High score: 0 </td>
@@ -54,7 +54,7 @@
                 <td rowspan = 2>
                 <img src = '../assets/images/where-seed-thumbnail.png' src = "Where's the Seed? thumbnail">
                 </td>
-                <td colspan = 2> Where's The Seed? </td>
+                <td colspan = 2 class = 'fw-bold'> Where's The Seed? </td>
             </tr>
             <tr>
                 <td> High score: 0 </td>
