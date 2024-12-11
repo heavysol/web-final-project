@@ -35,32 +35,16 @@
 
         <br>
 
-        <!-- Player records for games --> 
-        <table class = 'table table-dark table-sm table-borderless border rounded border-secondary'>
-            <tr>
-                <td rowspan = 2>
-                    <img src = '../assets/images/dont-crash-thumbnail.png' src = "Don't Crash thumbnail">
-                </td>
-                <td colspan = 2 class = 'fw-bold'> Don't Crash! </td>
-            </tr>
-            <tr>
-                <td> High score: 0 </td>
-                <td> Leaderboard position: 100 </td>
-            </tr>
-        </table>
+        <!-- Game list --> 
+        <div class = 'container border rounded border-secondary'>
+            dd
+        </div>
 
-        <table class = 'table table-dark table-sm table-borderless border rounded border-secondary'>
-            <tr>
-                <td rowspan = 2>
-                <img src = '../assets/images/where-seed-thumbnail.png' src = "Where's the Seed? thumbnail">
-                </td>
-                <td colspan = 2 class = 'fw-bold'> Where's The Seed? </td>
-            </tr>
-            <tr>
-                <td> High score: 0 </td>
-                <td> Leaderboard position: 100 </td>
-            </tr>
-        </table>
+        <br>
+        
+        <div class = 'container border rounded border-secondary'>
+            ee
+        </div>
 	</div>
 </body>
 </html>
