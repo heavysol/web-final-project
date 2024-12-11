@@ -24,10 +24,10 @@
                         <a href = './regular-dashboard.php' class = 'nav-link'> Home </a>
                     </li>
                     <li class = 'nav-item'>
-                        <a href = '#' class = 'nav-link'> Games </a>
+                        <a href = './games.php' class = 'nav-link'> Games </a>
                     </li>
                     <li class = 'nav-item'>
-                        <a href = '#' class = 'nav-link'> Leaderboard </a>
+                        <a href = './leaderboard.php' class = 'nav-link'> Leaderboard </a>
                     </li>
                 </ul>
             </div>
@@ -41,7 +41,7 @@
         </div>
 
         <br>
-        
+
         <div class = 'container border rounded border-secondary'>
             ee
         </div>
