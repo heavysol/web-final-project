@@ -36,7 +36,9 @@
 					<input type = 'email' class = 'form-control' name = 'email' placeholder = 'Enter email address, like jj@gmail.com' required>
 				</div> 
 
-				<a href = './login.php' class = 'btn btn-link mx-auto d-block'>Log in if you already have an account</a>
+				<br>
+				
+				<a href = './login.php' class = 'btn btn-outline-secondary mx-auto d-block'>Log in if you already have an account</a>
 
 				<br>
 

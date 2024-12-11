@@ -26,7 +26,9 @@
 					<input type = 'password' class = 'form-control' name = 'passw' placeholder = 'Enter password' minlength = 8 required>
 				</div>
 
-				<a href = './signup.php' class = 'btn btn-link mx-auto d-block'>Sign up if you don't have an account</a>
+				<br>
+				
+				<a href = './signup.php' class = 'btn btn-outline-secondary mx-auto d-block'>Sign up if you don't have an account</a>
 
 				<br>
 
