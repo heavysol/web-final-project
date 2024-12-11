@@ -20,11 +20,6 @@
 		<div id = 'content'></div>
 	</div>
 		
-
-	<footer>
-		
-	</footer>
-
-	<!--<script src = '../assets/js/index-content.js'></script>-->
+	<script src = '../assets/js/index-content.js'></script>
 </body>
 </html>
