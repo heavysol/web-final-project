@@ -38,7 +38,7 @@
 
 				<br>
 				
-				<a href = './login.php' class = 'btn btn-outline-secondary mx-auto d-block'>Log in if you already have an account</a>
+				<a href = './login.php' class = 'btn btn-secondary mx-auto d-block'>Log in if you already have an account</a>
 
 				<br>
 

@@ -28,7 +28,7 @@
 
 				<br>
 				
-				<a href = './signup.php' class = 'btn btn-outline-secondary mx-auto d-block'>Sign up if you don't have an account</a>
+				<a href = './signup.php' class = 'btn btn-secondary mx-auto d-block'>Sign up if you don't have an account</a>
 
 				<br>
 
