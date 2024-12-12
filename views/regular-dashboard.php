@@ -39,7 +39,7 @@
         <table class = 'table table-dark table-sm table-borderless border rounded border-secondary'>
             <tr>
                 <td rowspan = 2>
-                    <img src = '../assets/images/dont-crash-thumbnail.png' src = "Don't Crash thumbnail">
+                    <img src = '../assets/images/dont-crash-thumbnail.png' alt = "Don't Crash thumbnail">
                 </td>
                 <td colspan = 2 class = 'fw-bold'> Don't Crash! </td>
             </tr>
@@ -52,7 +52,7 @@
         <table class = 'table table-dark table-sm table-borderless border rounded border-secondary'>
             <tr>
                 <td rowspan = 2>
-                <img src = '../assets/images/where-seed-thumbnail.png' src = "Where's the Seed? thumbnail">
+                <img src = '../assets/images/where-seed-thumbnail.png' alt = "Where's the Seed? thumbnail">
                 </td>
                 <td colspan = 2 class = 'fw-bold'> Where's The Seed? </td>
             </tr>
