@@ -32,8 +32,17 @@
 
         <br>
 
-        <!-- Player records for games --> 
-        
+        <!-- Site records --> 
+        <table class = 'table table-dark table-sm table-borderless border rounded border-secondary'>
+            <tr>
+                <td> Total number of players </td>
+                <td colspan = 2 class = 'fw-bold'> 0 </td>
+            </tr>
+            <tr>
+                <td> Total playtime across games </td>
+                <td> 0 </td>
+            </tr>
+        </table>
 	</div>
 </body>
 </html>
