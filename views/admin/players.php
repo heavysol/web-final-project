@@ -21,10 +21,10 @@
             <div class = 'container-fluid'>
                 <ul class = 'navbar-nav'>
                     <li class = 'nav-item'>
-                        <a href = './regular-dashboard.php' class = 'nav-link'> Home </a>
+                        <a href = './admin-dashboard.php' class = 'nav-link'> Home </a>
                     </li>
                     <li class = 'nav-item'>
-                        <a href = './games.php' class = 'nav-link'> Players </a>
+                        <a href = './players.php' class = 'nav-link'> Players </a>
                     </li>
                 </ul>
             </div>
