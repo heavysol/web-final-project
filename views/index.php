@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html  lang = 'en'>
 <head>
-<title> Startup </title>
+<title> Startup - GameStation </title>
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
 	<link rel = 'stylesheet' href = '../assets/css/general-styles.css'>
 	<link rel = 'stylesheet' href = '../assets/css/bootstrap-css/bootstrap.min.css'>
