@@ -20,11 +20,11 @@
 	<div id = 'game_screen'></div>
 
     <script src = "phaser.min.js"></script>
-            <script type="module" src="../assets/js/games/endless-runner/Prompt-Text-folder/index.js"></script>
+            <script type="module" src="../assets/js/games/dont-crash/Prompt-Text-folder/index.js"></script>
 
-            <script type = 'module' src = '../assets/js/games/endless-runner/GameState.js'></script>
-            <script type = 'module' src = '../assets/js/games/endless-runner/PromptScene.js'></script>
-            <script type = 'module' src = '../assets/js/games/endless-runner/GameScene.js'></script>
-            <script type = 'module' src = '../assets/js/games/endless-runner/game.js'></script>
+            <script type = 'module' src = '../assets/js/games/dont-crash/GameState.js'></script>
+            <script type = 'module' src = '../assets/js/games/dont-crash/PromptScene.js'></script>
+            <script type = 'module' src = '../assets/js/games/dont-crash/GameScene.js'></script>
+            <script type = 'module' src = '../assets/js/games/dont-crash/game.js'></script>
 </body>
 </html>

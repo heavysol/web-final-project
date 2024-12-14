@@ -1,0 +1,107 @@
+20 Apr '24
+Plan for endless runner
+
+Game: simple endless runner game, with chara running on 3 lanes it can switch to, that have randomly positioned obstacles on em that'll end the game if chara touches one.
+
+Game loop
+1. In the beginning of the game, chara is positioned in the middle lane of the 3 lanes available for it t'move to at any time at the bottom of the screen 
+
+2. Obstacles - henceforth ob - are generated, randomly positioned in any of the 3 lanes at the top of the screen, and move to the bottom within their assigned lane where chara is
+
+3. IF an ob touches chara: go to 4
+ELSE: Go t'2
+
+4. Game over screen; player has choice t'restart game
+IF player restarts game: go to 1
+
+Classes
+1. RunnerGame:
+Description: The game loop and UI
+
+Attributes: scene, width o screen, height .., chara (Chara obj), isTouched (whether chara touched an ob)
+
+Methods:
+- static gameSetup(): creates the lanes, chara and obs as well as their interactions
+- static startGame(): begins the game loop by running gameSetup()
+- static endGame(): ends th loop by not running gameSetup() anymore, and runs gameOver()
+- static gameOver(): shows game over screen, with th option to restart the game
+
+2. Body
+Description: represents elements in game that can collide with each other t'affect some change in the game and-or th game loop; eg are obs, chara.
+
+Attributes: scene, width, height, image
+
+Methods: NA
+
+3. Chara from Body
+Description: playable chara in game
+
+Attributes: same as Body
+
+Methods:
+- moveToNewLane(): moves either left ou right to new lane away from the prev one depending on the player's input
+
+4. Obstacle from Body
+Description: ob in game
+
+Attributes: same as Body
+
+Methods:
+- positionOb(): randomly assigns an Ob obj to a lane at the top of the screen
+- moveDown(): makes Ob obj move down its assigned lane
+
+29 mai '24
+Refactoring classes 
+
+Class relationship diagram
+NB: Indented classes indicate subclasses
+Body
+    PointCounter
+    Sprite
+    Group
+        Obstacle
+        RoadScripe
+        Passive
+            Mud
+            Shield
+BGM
+
+Class desc.
+1. Body:
+Attributes: scene, img
+
+2. PointCounter:
+Attributes: same as Body; and width, height
+Methods: createPointDisplay(), updatePointDisplay()
+
+3. Sprite:
+Attributes: same as Body; and width, height
+Methods: createSprite()
+
+4. Group:
+Attributes: same as Body
+Methods: createGroup(), falling(method)
+
+5. Obstacle:
+Attributes: same as Group; and width, height, gameScene, pointInterval, presRate, endScene
+Methods: same as Group; and createOb(chara), increObRate(), gameEnd()
+
+6. RoadScripe:
+Attributes: same as Group
+Methods: same as Group; and createScripes(), makeOneScripe()
+
+7. Passive:
+Attributes: same as Group, and width, height, overlap [methods exclusive to Mud and Shield]
+Methods: same as Group; and createPassive(overlap)
+
+8. Mud:
+Attributes: same as Passive, except overlap
+Methods: same as Group; and slowChara()
+
+9. Shield:
+Attributes: same as Passive, except overlap
+Methods: same as Group; and shieldChara()
+
+10. BGM:
+Attributes: scene
+Methods: playBGM(music)

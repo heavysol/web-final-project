@@ -1,0 +1,213 @@
+6 juin '24
+
+Rough pseudocode of classes and their methods
+
+Class relationship diagram
+NB: Indented classes indicate subclasses
+Body
+    PointCounter
+    Sprite
+    Group
+        Obstacle
+        RoadScripe
+        Passive
+            Mud
+            Shield
+BGM
+
+Pseudocode:
+
+NB: gameState is the global obj o th game that stores attributes and states that need to be accessed globally across all classes and objs
+
+NB: Put the export keyword for ALL classes: going to export them to GameScene
+
+NB: Apart from Body, eradicate gameState declarations and such: they're already in their superclass Body
+
+1. Body:
+class Body:
+    constructor(scene, img, gameState):
+        this.scene = scene
+        this.img = img
+        this.gameState = gameState
+
+2. PointCounter:
+class PointCounter:
+    constructor(same as Body, width, height, gameState):
+        super(Body's attributes)
+        this.width = width
+        this.height = height
+        this.gameState = gameState
+        this.p = null # Phaser text obj showing points
+        this.point = 0 # Point count
+        this.update_rate = 1000 # Rate of point increment
+        this.loop = null # Stores loop needed in updatePointDisplay
+
+    createPointDisplay():
+        this.p = Phaser text obj((7/8) * this.gameState.width, 5, this.point, { color: '#ffff00', fontSize: '14pt'})
+        p.depth = 20
+
+    updatePointDisplay(this.update_rate):
+        this.loop = Phaser loop obj(
+            every this.update_rate sec, run increPoints()
+        )
+
+    increPoints(): # Increments point count by 1
+        this.p.setText(this.point++)
+
+    stopUpdatePoints():
+        stop loop in this.loop
+        this.point = 0
+
+3. Sprite:
+class Sprite:
+    constructor(same as Body, width, height, gameState = null):
+        super(Body's attributes)
+        this.width = width
+        this.height = height
+        this.gameState = gameState
+        this.speed = some val # speed of chara moving left to right
+        this.hp = 1 # hit points: chara getting hit by ob subtracts 1 from hp; if hp's 0, game over
+        this.createSprite()
+
+    createSprite():
+        s = Phaser sprite obj(this.gameState.width, this.gameState.height, this.img)
+        s.depth = 10
+        return s 
+
+4. Group:
+class Group:
+    constructor(same as Body, width = null, height = null, gameState = null):
+        super(Body's attributes)
+        this.width = width
+        this.height = height
+        this.gameState = gameState
+        this.gameScene = gameScene # gameScene needed to transition between scenes upon game over
+        this.group = Phaser group obj()
+
+    setGroupAttributes(group):
+        switch(group):
+            case 'str':
+                this.group.setAll(depth, 2)
+                this.group.setAll(setScale, .2)this.group.setAll(setImmovable, true)
+            case 'ob':
+                this.group.setAll(flipY, true)
+                this.group.setAll(depth, 10)
+            case 'pas':
+                this.group.setAll(depth, 10)
+
+    falling(time, method): # Makes group objs descend down the screen; time is the rate of method execution in the loop; method is the specific method the loop'll run
+        this.group.forEach():
+            Phaser loop obj(
+                every time sec, run method
+            )
+
+5. Obstacle:
+class Obstacle:
+    constructor(same as Group, width, height, pointCounter): # pointCounter is a PointCounter obj
+        super(Group's attributes)
+        this.height = height
+        this.pointCounter = pointCounter
+        this.presRate = presRate # Initial rate of ob generation
+        this.endScene = endScene # EndScene obj for game over screen
+        this.group.setGroupAttributes('ob')
+
+    createOb(chara): # chara is the chara obj
+        xCoord = value from Math obj(random number from range between 0 and gameState.width inclusive)
+        ob = Phaser sprite obj(xCoord, this.height, this.img)
+        this.group.add(ob)
+        Phaser collision obj(chara, ob, gameEnd())
+
+    increObRate(): # Increments quantity o objs as the game runs
+        Phaser loop obj(
+            every [specify time] sec, subtract [specify time] from this.presRate 
+        )
+
+    gameEnd():
+        this.pointCounter.stopUpdatePoints()
+        this.endScene.setPrompt(`Game over!\nYou have ${this.pointCounter.point} point(s)\nPress k to restart game`)
+        gameScene.stopScene('GameScene')
+        gameScene.startScene('EndScene')
+
+6. RoadScripe:
+class RoadScripe:
+    constructor(same as Group):
+        super(Group's attributes)
+        this.group.setGroupAttributes('str')
+
+    createScripes():
+        scripes = [this.makeOneScripe((1 / 6) * gameState.width), this.makeOneScripe((3 / 6) * gameState.width), this.makeOneScripe((5 / 6) * gameState.width)]
+
+    makeOneScripe(width):
+        s = this.create(width, this.gameState.height, this.img)
+        this.group.add(s)
+        return s
+
+7. Passive:
+class Passive:
+    constructor(same as Group):
+        super(Group's attributes)
+        this.width = width
+        this.height = height
+        this.overlap = overlap # overlap is a method exclusive to Passive's subclasses (Mud, Shield), needed for createPassive(), specifically slowChara(chara) and shieldChara(chara)
+
+    createPassive(chara, this.overlap):
+        Phaser collision obj(chara, this, this.overlap)
+    
+8. Mud:
+class Mud:
+    constructor(same as Passive, sauf overlap):
+        super(Passive's attributes, sauf overlap)
+
+    slowChara(chara):
+        js interval obj(for [time] sec, chara.speed -= some val) 
+
+9. Shield:
+class Shield:
+    constructor(same as Passive, sauf overlap):
+        super(Passive's attributes, sauf overlap)
+
+    shieldChara(chara):
+        chara.hp += 1
+        chara.blueTint(true) # not a real method, but signifies the chara gets a blue tint as long as hp > 1
+
+10. BGM:
+class BGM:
+    constructor(scene):
+        this.scene = scene
+
+    playBGM(music):
+        Phaser sound obj(play music)
+
+Cloud Fruition
+
+26 juin '24
+GameScene pseudocode:
+import essentially all classes in PLAN
+import GameState 
+
+GameScene extends Phaser.Scene:
+    constructor(endScene):
+        super({key: 'GameScene'})
+        this.endScene = endScene
+
+    preload():
+        load chara, ob and stripe imgs and bgm to game
+
+    create():
+        #gameState.bgm = new BGM(this)
+        #gameState.bgm.playBGM(the bgm loaded in)
+
+        gameState.strs = new RoadScripe(this, stripe img, gameState).createGroup() # w and h are specified vals of width and height respectively
+        gameState.strs.falling(t, gameState.strs.createScripes()) # t is some specified time val
+
+        gameState.chara = new Sprite(this, chara img, gameState, w, h) # w and h are specified vals of width and height respectively
+        gameState.chara.createSprite()
+
+        gameState.pcount = new PointCounter(this, null, gameState, w, h)
+        gameState.pcount.createPointDisplay()
+        gameState.pcount.updatePointDisplay()
+
+        gameState.obs = new Obstacle(this, stripe img, gameState, h, gameState.pcount).createGroup()
+        gameState.obs.falling(gameState.obs.presRate, gameState.obs.createOb())
+
+        # for Mud and Shield objs, their declaration's pretty much the same as obs, BUT for the time argument for their falling() calls, put a LOW STATIC VALUE there for now, so the passive item generation is low and constant 

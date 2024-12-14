@@ -1,0 +1,80 @@
+7 juin '24
+Plan for endless runner
+
+Game: simple endless runner game, with a red car controlled by the player - henceforth 'chara' - driving on a motorway across a stright horizonal invisible plane on the bottom width of the game screen it can move left to right freely within. Other cars - henceforth 'obstacles' or 'obs' - descend from the top of the screen on the motorway that'll end the game if chara collides with one. Other objs are on the road, like mud puddles and shields, that chara can touch and be changed in some way: the former'll will make chara's left-right movement slower, and the latter will enable chara to take an extra hit from obs sans game over.
+
+Game loop
+1. In the beginning of the game, chara is positioned in the middle lane of the 3 lanes available for it t'move to at any time at the bottom of the screen 
+
+2. Obstacles - henceforth ob - are generated, randomly positioned in any of the 3 lanes at the top of the screen, and move to the bottom within their assigned lane where chara is
+
+3. IF an ob touches chara: go to 4
+ELSE: Go t'2
+
+4. Game over screen; player has choice t'restart game
+IF player restarts game: go to 1
+
+Classes
+
+Class relationship diagram
+NB: Indented classes indicate subclasses
+Body
+    PointCounter
+    Sprite
+    Group
+        Obstacle
+        RoadScripe
+        Passive
+            Mud
+            Shield
+BGM
+
+Class desc.
+1. Body:
+Desc: All objs in the game save BGM (seen later)
+Attributes: scene, img
+
+2. PointCounter:
+Desc: Counts the current score that the player's acquired over the course of the game; as long as game over's not reached, the point counter keeps increasing over time
+Attributes: same as Body; and width, height
+Methods: createPointDisplay(), updatePointDisplay()
+
+3. Sprite:
+Desc: Phaser sprite obj; used for creating chara
+Attributes: same as Body; and width, height
+Methods: createSprite()
+
+4. Group:
+Desc: Phaser group obj; used to create groups of important objs in the game, like obs, road scripes, etc
+Attributes: same as Body
+Methods: createGroup(), falling(method)
+
+5. Obstacle:
+Desc: The game's obs, the cars descending down the motorway to crash with chara and cause thus game over
+Attributes: same as Group; and width, height, gameScene, pointInterval, presRate, endScene
+Methods: same as Group; and createOb(chara), increObRate(), gameEnd()
+
+6. RoadScripe:
+Desc: Road scripes on the motorway, just to convey better the game is situated on a motorway
+Attributes: same as Group
+Methods: same as Group; and createScripes(), makeOneScripe()
+
+7. Passive:
+Desc: Other game objs that the chara can touch which causes some of its attributes to be modified
+Attributes: same as Group, and width, height, overlap [methods exclusive to Mud and Shield]
+Methods: same as Group; and createPassive(overlap)
+
+8. Mud:
+Desc: Passive that slows down chara's left-right movement upon touched
+Attributes: same as Passive, except overlap
+Methods: same as Group; and slowChara()
+
+9. Shield:
+Desc: Passive that enable chara to take an extra hit from obs sans game over.
+Attributes: same as Passive, except overlap
+Methods: same as Group; and shieldChara()
+
+10. BGM:
+Desc: Background music of game
+Attributes: scene
+Methods: playBGM(music)
