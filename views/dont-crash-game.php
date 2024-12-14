@@ -25,7 +25,7 @@
 
             <script type = 'module' src = '../assets/js/games/endless-runner/GameState.js'></script>
             <script type = 'module' src = '../assets/js/games/endless-runner/PromptScene.js'></script>
-            <script type = 'module' src = 'GameScene.js'></script>
+            <script type = 'module' src = '../assets/js/games/endless-runner/GameScene.js'></script>
             <script type = 'module' src = '../assets/js/games/endless-runner/game.js'></script>
 </body>
 </html>
