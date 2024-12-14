@@ -4,6 +4,7 @@
 <title> Startup </title>
 	<meta name = 'viewport' content = 'width = device-width, initial-scale = 1.0'>
 	<link rel = 'stylesheet' href = '../assets/css/general-styles.css'>
+    <link rel = 'stylesheet' href = '../assets/css/game-screen-styles.css'>
 	<link rel = 'stylesheet' href = '../assets/css/bootstrap-css/bootstrap.min.css'>
 </head>
  
@@ -15,10 +16,8 @@
     <div class = 'container'></div>
 	
 	<!-- Screen -->
-	<div class = 'container p-5 my-5 border border-3 rounded bg-dark'>
-        <!-- Game -->
-        <div id = 'game_screen'></div>
-	</div>
+    <br><br>
+	<div id = 'game_screen'></div>
 
     <script src = "phaser.min.js"></script>
             <script type="module" src="../assets/js/games/endless-runner/Prompt-Text-folder/index.js"></script>

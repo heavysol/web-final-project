@@ -1,0 +1,9 @@
+#game_screen {
+    background-color: #212529; 
+    width: 92%;
+    margin: auto;
+    border: 3px solid white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
