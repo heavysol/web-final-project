@@ -29,6 +29,9 @@
                     <li class = 'nav-item'>
                         <a href = './leaderboard.php' class = 'nav-link'> Leaderboard </a>
                     </li>
+                    <li class = 'nav-item'>
+                        <a href = './edit-profile.php' class = 'nav-link'> Edit profile </a>
+                    </li>
                 </ul>
             </div>
         </nav>
