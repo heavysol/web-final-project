@@ -60,7 +60,7 @@
         global $conn;
         $checksql = "SELECT * FROM users WHERE username = '$usern' LIMIT 1";
         $result = $conn->query($checksql)->fetch_assoc();
-        if ($result['username'] == $email) {
+        if ($result['username'] == $usern) {
             if (!password_verify($pass, $result['password'])) {
                 echo 'Wrong password. Please enter the correct one';
                 redirect("Refresh:2; url=../views/login.php");} 
