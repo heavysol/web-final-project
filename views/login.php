@@ -15,7 +15,7 @@
 	<div class = 'container p-5 my-5 border border-3 rounded bg-dark'>
 		<section>
 			<h1> Log in </h1>
-			<form action = ''>
+			<form method = 'post' action = '../actions/login_user.php'>
 				<div>
 					<label for = 'uname' class = 'form-label'> Username </label>
 					<input type = 'text' class = 'form-control' name = 'uname' placeholder = 'Enter username, like apple123' minlength = 1 required>
