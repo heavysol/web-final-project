@@ -2,7 +2,7 @@
 include('../db/config.php');
 include('../functions/auth_functions.php');
 
-if (isset($_POST['register'])) {
+if (isset($_POST['signup'])) {
     // receive all input values from the form
     $username = $_POST['uname'];
     $password = $_POST['passw'];

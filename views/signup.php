@@ -42,7 +42,7 @@
 
 				<br>
 
-				<button class = 'btn btn-light mx-auto d-block' name = 'login'> Sign up </button>
+				<button class = 'btn btn-light mx-auto d-block' name = 'signup'> Sign up </button>
 			</form>
 	</div>
 </body>
