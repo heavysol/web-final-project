@@ -37,11 +37,6 @@
         $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
         $rol = 1; // role code for regular users (players); for admin, it's 2
         // CHANGE ROL À 2 DONC QUE J'PEUX AJOUTER UN COMPTE ADMIN
-        function makeSQLQuery($sql_str) {
-            global $conn;
-            $insertsql = $sql_str;
-            $result = $conn->query($insertsql);
-        }
 
         $insertsql = "INSERT INTO users (username, `password`, email, `role`, created_at, updated_at) VALUES ('$un', '$pass_hash','$email', '$rol', '$crea_at', '$up_at');";
         $result = $conn->query($insertsql);
