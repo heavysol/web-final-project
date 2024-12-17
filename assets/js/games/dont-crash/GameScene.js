@@ -19,6 +19,7 @@ export class GameScene extends Phaser.Scene {
 
     create() {
         gameState.point = 0;
+        gameState.high_score = 0;
         gameState.points = this.addPointCounter();
         let inter = window.setInterval(() => {
             gameState.points.destroy();
