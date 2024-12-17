@@ -45,12 +45,11 @@ export class Obstacle extends Body {
 
     gameEnd() {
         clearInterval(this.pointInterval);
+        if (gameState.point > gameState.high_score) gameState.high_score = gameState.point;
+        postHighScore(gameState.high_score);
         this.endScene.setPrompt(`Game over!\nYou have ${gameState.point} point(s)\nPress k to restart game`);
         this.gameScene.scene.stop('GameScene');
         this.gameScene.scene.start('EndScene');
-
-        if (gameState.point > gameState.high_score) gameState.high_score = gameState.point;
-        postHighScore(gameState.high_score);
     }
 
     /*latestScore() {

@@ -5,7 +5,7 @@
     function writeHighScoreToDB($score) {
         session_start();
         $id = $_SESSION['id'];
-        $sql = "INSERT INTO `dont-crash` (high_score) VALUES ('$score')";
+        $sql = "INSERT INTO `dont-crash` (high_score) VALUES ('$score') WHERE player_id = '$id'";
         makeSQLQuery($sql);
     }
 ?>
