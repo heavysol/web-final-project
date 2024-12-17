@@ -2,6 +2,7 @@
 
 import { Body } from "./Body.js";
 import gameState from "../GameState.js";
+import { postHighScore } from "../../high_score_post.js";
 
 export class Obstacle extends Body {
     constructor(scene, width, height, img, gameScene, pointInterval, endScene) {
@@ -47,6 +48,9 @@ export class Obstacle extends Body {
         this.endScene.setPrompt(`Game over!\nYou have ${gameState.point} point(s)\nPress k to restart game`);
         this.gameScene.scene.stop('GameScene');
         this.gameScene.scene.start('EndScene');
+
+        if (gameState.point > gameState.high_score) gameState.high_score = gameState.point;
+        postHighScore(gameState.high_score);
     }
 
     /*latestScore() {

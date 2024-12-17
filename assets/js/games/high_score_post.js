@@ -1,4 +1,4 @@
-function postHighScore(score) {
+export function postHighScore(score) {
     let xml = new XMLHttpRequest();
     const url = '../actions/dont-crash_acts.php';
     const highscore = JSON.stringify({'high-score': score});
