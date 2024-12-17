@@ -47,7 +47,12 @@
                 <td colspan = 2 class = 'fw-bold'> Don't Crash! </td>
             </tr>
             <tr>
-                <td> High score: 0 </td>
+                <td> 
+                    <?php
+                        include('../functions/regular_dashboard_functions.php'); 
+                        echo viewHighScore(1);
+                    ?>
+                </td>
                 <td> Leaderboard position: 100 </td>
             </tr>
         </table>
@@ -60,7 +65,12 @@
                 <td colspan = 2 class = 'fw-bold'> Where's The Seed? </td>
             </tr>
             <tr>
-                <td> High score: 0 </td>
+                <td>
+                <?php
+                        include('../functions/regular_dashboard_functions.php'); 
+                        echo viewHighScore(2);
+                    ?>
+                </td>
                 <td> Leaderboard position: 100 </td>
             </tr>
         </table>
