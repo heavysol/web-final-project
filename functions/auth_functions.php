@@ -37,10 +37,22 @@
         $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
         $rol = 1; // role code for regular users (players); for admin, it's 2
         // CHANGE ROL À 2 DONC QUE J'PEUX AJOUTER UN COMPTE ADMIN
+        function makeSQLQuery($sql_str) {
+            $insertsql = $sql_str;
+            $result = $conn->query($insertsql);
+        }
 
         $insertsql = "INSERT INTO users (username, `password`, email, `role`, created_at, updated_at) VALUES ('$un', '$pass_hash','$email', '$rol', '$crea_at', '$up_at');";
         $result = $conn->query($insertsql);
         if ($result) {
+            $insertsql = "INSERT INTO `dont-crash` (player_id) SELECT id FROM `users` WHERE email='$email';";
+            $insertsql .= "INSERT INTO `dont-crash` (high_score, playtime) VALUES (0, 0);";
+            $insertsql .= "INSERT INTO `where-seed` (player_id) SELECT id FROM `users` WHERE email='$email';";
+            $insertsql .= "INSERT INTO `where-seed` (high_score, playtime) VALUES (0, 0);";
+            $result = $conn->multi_query($insertsql);
+            if (!$result) die("Error:" . $conn->error); else $result->free();
+            echo $result;
+            //$conn->next_result();
             echo 'Sign in successful!';
             validateLogin($pass, $un);
         } else {

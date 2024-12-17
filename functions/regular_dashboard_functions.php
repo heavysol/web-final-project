@@ -1,5 +1,5 @@
 <?php
-    include('../../db/config.php');
+    include('../db/config.php');
     include('misc_functions.php');
 
     function getTotalUsers() {
