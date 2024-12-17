@@ -48,7 +48,7 @@
             </tr>
             <tr>
                 <td> 
-                    <?php
+                    High score: <?php
                         include('../functions/regular_dashboard_functions.php'); 
                         echo viewHighScore(1);
                     ?>
@@ -66,9 +66,9 @@
             </tr>
             <tr>
                 <td>
-                <?php
-                        include('../functions/regular_dashboard_functions.php'); 
-                        echo viewHighScore(2);
+                High score: <?php
+                    include('../functions/regular_dashboard_functions.php'); 
+                    echo viewHighScore(2);
                     ?>
                 </td>
                 <td> Leaderboard position: 100 </td>
