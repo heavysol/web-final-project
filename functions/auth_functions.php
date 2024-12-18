@@ -71,7 +71,10 @@
                 redirect("Refresh:2; url=../views/login.php");} 
             else {
                 session_start();
-                $_SESSION['id'] = $result['id'];$_SESSION['role'] = $result['role'];
+                $_SESSION['id'] = $result['id'];
+                $_SESSION['username'] = $result['username'];
+                $_SESSION['password'] = $result['password'];
+                $_SESSION['email'] = $result['email'];$_SESSION['role'] = $result['role'];
                 redirectToDashboard($_SESSION['role']);
             }
         } else {
