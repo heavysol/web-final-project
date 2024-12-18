@@ -2,8 +2,8 @@
 import gameState from "../game/GameState.js";
 
 // Game scene
-gameState.width = 640;
-gameState.height = 360;
+gameState.width = 400;
+gameState.height = 260;
 export const game_w = gameState.width
 export const game_h = gameState.height
 

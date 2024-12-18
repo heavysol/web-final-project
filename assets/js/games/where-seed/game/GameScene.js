@@ -12,18 +12,19 @@ import { Timer } from "../objects/Timer.js";
 export class GameScene extends Phaser.Scene {
     constructor() {
         super({key: 'GameScene'});
+        console.log('active con')
     }
 
     preload() {
-        this.load.image('seed', '../assets/images/seed.png');
-        this.load.image('pic', '../assets/images/mandalas.jpg');
+        this.load.image('seed', 'assets/images/seed.png');
+        this.load.image('pic', 'assets/images/mandalas.jpg');
     }
 
     create() {
+        console.log('active')
         //const score_pos = n
         gameState.isTrueSeedFound = false;
         gameState.isFakeSeedFound = false;
-        gameState.shouldPauseUpdate = false;
 
         gameState.picture = new Picture(this, game_w / 2, game_h / 2, game_w, game_h, 'pic');
         gameState.scores = new Scores(this, scores_vals.x, scores_vals.y, 0, {fontFamily: 'sans-serif', backgroundColor: 'black'}, game_w / 20, game_h / 10);
@@ -37,35 +38,19 @@ export class GameScene extends Phaser.Scene {
     }
 
     update() {
-        if (!gameState.shouldPauseUpdate) this.isSeedFound();
+        console.log('check')
+        this.isSeedFound();
     }
 
     isSeedFound() {
-        if (gameState.isTrueSeedFound || gameState.timer <= 0) {
-            gameState.shouldPauseUpdate = true;
-            
-        }
         if (gameState.isTrueSeedFound && gameState.timer.text > 0) this.printMessageAtGameEnd('Seed found!', 'black');
         else if (!gameState.isTrueSeedFound && gameState.timer.text <= 0) this.printMessageAtGameEnd('Seed NOT found\nGame over', 'red');
-
-        gameState.shouldPauseUpdate = true;
-    }
-
-    refreshGame() {
-        gameState.after_seed_click.destroy();
-        Seed.enableSeedInteractivity(gameState.true_seed);
-        gameState.timer.resetTimer(5);
-        gameState.isTrueSeedFound = false;
-        gameState.true_seed.setRandomPosition();
-        gameState.timer.updateTimer();
     }
 
     printMessageAtGameEnd(text, background_colour) {
-        gameState.shouldPauseUpdate = true;
         Seed.disableSeedInteractivity(gameState.true_seed);
         gameState.timer.timer.paused = true;
-        gameState.after_seed_click = this.add.text(game_w / 3, game_h / 2, text, {fontSize: '24pt', fontFamily: 'sans-serif', color: 'white', backgroundColor: background_colour});
-        gameState.after_seed_click.setDepth(80);
-        this.time.delayedCall(3000, this.refreshGame, null, this);
+        const after_seed_click = this.add.text(game_w / 3, game_h / 2, text, {fontSize: '24pt', fontFamily: 'sans-serif', color: 'white', backgroundColor: background_colour});
+        after_seed_click.setDepth(80);
     }
 }

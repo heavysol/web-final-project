@@ -2,10 +2,6 @@ import '../utils/static_vals.js'
 import { GameScene } from './GameScene.js';
 import gameState from './GameState.js';
 
-/*export const endScene = new PromptScene('EndScene', '', 'k', 'GameScene');
-export const gameScene = new GameScene(endScene);
-export const startScene = new PromptScene('StartScene', 'Welcome to this endless runner!\nPress k on your keyboard to play', 'k', 'GameScene');*/
-
 const config = {
     width: gameState.width,
     height: gameState.height,
@@ -16,9 +12,12 @@ const config = {
         arcade: {
             enableBody: true,
             debug: false,
-        }
+        },
+        parent: 'game_screen',
+        dom: { createContainer: true },
     },
     scene: GameScene
 };
 
 const game = new Phaser.Game(config);
+const container = document.getElementById('game_screen').appendChild(game.canvas);

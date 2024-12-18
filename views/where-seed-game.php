@@ -21,6 +21,6 @@
 
     <script src = "phaser.min.js"></script>
             
-    <script type = 'module' src = '../assets/js/games/where-seed/game.js'></script>
+    <script type = 'module' src = '../assets/js/games/where-seed/game/game.js'></script>
 </body>
 </html>
