@@ -12,16 +12,14 @@ import { Timer } from "../objects/Timer.js";
 export class GameScene extends Phaser.Scene {
     constructor() {
         super({key: 'GameScene'});
-        console.log('active con')
     }
 
     preload() {
-        this.load.image('seed', 'assets/images/seed.png');
-        this.load.image('pic', 'assets/images/mandalas.jpg');
+        this.load.image('seed', '../assets/images/where-seed-assets/seed.png');
+        this.load.image('pic', '../assets/images/where-seed-assets/mandalas.jpg');
     }
 
     create() {
-        console.log('active')
         //const score_pos = n
         gameState.isTrueSeedFound = false;
         gameState.isFakeSeedFound = false;
@@ -38,7 +36,6 @@ export class GameScene extends Phaser.Scene {
     }
 
     update() {
-        console.log('check')
         this.isSeedFound();
     }
 
