@@ -22,6 +22,7 @@ export class Timer extends Phaser.GameObjects.Text {
 
     resetTimer(time) {
         this.setText(time);
+        this.timer.paused = false;
     }
 
     decreTime() {
