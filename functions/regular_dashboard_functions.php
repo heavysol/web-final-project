@@ -2,6 +2,8 @@
     include('../db/config.php');
     include('misc_functions.php');
 
+    $account_exists = false; // stores true/false to signify if newly registered account already exists in db
+
     function writeDontCrashHSToDB($score) {
         session_start();
         $id = $_SESSION['id'];
