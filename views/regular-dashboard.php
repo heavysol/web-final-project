@@ -49,8 +49,8 @@
             <tr>
                 <td> 
                     High score: <?php
-                        include('../functions/regular_dashboard_functions.php'); 
-                        echo viewHighScore(1);
+                        require_once '../functions/regular_dashboard_functions.php';
+                        error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);echo viewHighScore(1);
                     ?>
                 </td>
                 <td> Leaderboard position: 100 </td>
@@ -67,7 +67,7 @@
             <tr>
                 <td>
                 High score: <?php
-                    include('../functions/regular_dashboard_functions.php'); 
+                    error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
                     echo viewHighScore(2);
                     ?>
                 </td>
