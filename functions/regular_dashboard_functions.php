@@ -51,4 +51,17 @@
             redirect("Refresh:2; url=../views/edit-profile.php");
         };
     }
+
+    function writeToDB($un, $pass, $email) {
+        global $conn, $account_exists;
+
+        if ($account_exists) return; // if account already exists, the function execution stops here
+
+        $pass_hash = password_hash($pass, PASSWORD_DEFAULT);
+        $rol = 1; // role code for regular users (players); for admin, it's 2
+        // CHANGE ROL À 2 DONC QUE J'PEUX AJOUTER UN COMPTE ADMIN
+
+        $insertsql = "INSERT INTO users (username, `password`, email) VALUES ('$un', '$pass_hash','$email' WHERE email = '$email';";
+        $result = $conn->query($insertsql);
+    }
 ?>
