@@ -65,5 +65,13 @@
         $result = $conn->query($insertsql);
         echo 'Edit successful!';
         redirect("Refresh:2; url=../views/regular_dashboard.php");
+    };
+
+    function getUsername() {
+        session_start();
+        $email = $_SESSION['email'];
+        $insertsql = "SELECT * FROM users WHERE email = '$email';";
+        $result = $conn->query($insertsql)->fetch_assoc();
+        return $result['username'];
     }
 ?>
