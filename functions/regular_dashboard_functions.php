@@ -69,20 +69,21 @@
 
     function getUsername() {
         $res = makeUserProfileQuery();
-        return $res['username'];
+        echo $res['username'];
     }
 
     function getPassword() {
         $res = makeUserProfileQuery();
-        return $res['password'];
+        echo $res['password'];
     }
 
     function getEmail() {
         $res = makeUserProfileQuery();
-        return $res['username'];
+        echo $res['email'];
     }
 
     function makeUserProfileQuery() {
+        global $conn;
         session_start();
         $email = $_SESSION['email'];
         $insertsql = "SELECT * FROM users WHERE email = '$email';";

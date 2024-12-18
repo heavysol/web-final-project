@@ -15,25 +15,30 @@
 	<div class = 'container p-5 my-5 border border-3 rounded bg-dark'>
 		<section>
 			<h1> Edit profile </h1>
-			<form action = ''>
+			<form action = '../actions/edit_profile_acts.php'>
+				<?php
+					require_once '../functions/regular_dashboard_functions.php';
+					error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
+					session_start();
+				?>
 				<div>
 					<label for = 'uname' class = 'form-label'> Username </label>
-					<input type = 'text' class = 'form-control' name = 'uname' value = "UTILISE PHP D'APPORTER LE VALEUR APPROPRIÉ ICI" minlength = 1  required>
+					<input type = 'text' class = 'form-control' name = 'uname' value = <?php getUsername();?> minlength = 1  required>
 				</div>
 
 				<div>
 					<label for = 'passw' class = 'form-label'> Password </label>
-					<input type = 'password' class = 'form-control' name = 'passw' value = "UTILISE PHP D'APPORTER LE VALEUR APPROPRIÉ ICI" minlength = 8 required>
+					<input type = 'password' class = 'form-control' name = 'passw' value = <?php getPassword();?> minlength = 8 required>
 				</div>
 
 				<div>
 					<label for = 'passw-con' class = 'form-label'> Confirm password </label>
-					<input type = 'password' class = 'form-control' name = 'passw-con' value = "UTILISE PHP D'APPORTER LE VALEUR APPROPRIÉ ICI" minlength = 8 required>
+					<input type = 'password' class = 'form-control' name = 'passw-con' value = <?php getPassword();?> minlength = 8 required>
 				</div>
 
 				<div>
 					<label for = 'email' class = 'form-label'> Email </label>
-					<input type = 'email' class = 'form-control' name = 'email' value = "UTILISE PHP D'APPORTER LE VALEUR APPROPRIÉ ICI" required>
+					<input type = 'email' class = 'form-control' name = 'email' value = <?php getEmail();?> required>
 				</div> 
 
 				<br>
