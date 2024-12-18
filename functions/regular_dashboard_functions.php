@@ -68,10 +68,25 @@
     };
 
     function getUsername() {
+        $res = makeUserProfileQuery();
+        return $res['username'];
+    }
+
+    function getPassword() {
+        $res = makeUserProfileQuery();
+        return $res['password'];
+    }
+
+    function getEmail() {
+        $res = makeUserProfileQuery();
+        return $res['username'];
+    }
+
+    function makeUserProfileQuery() {
         session_start();
         $email = $_SESSION['email'];
         $insertsql = "SELECT * FROM users WHERE email = '$email';";
         $result = $conn->query($insertsql)->fetch_assoc();
-        return $result['username'];
+        return $result;
     }
 ?>
