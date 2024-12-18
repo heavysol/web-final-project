@@ -11,5 +11,6 @@ if (isset($_POST['edit'])) {
 
     // validating entries and writing them to db
     validateEditForm($username, $password, $email, $password2);
+    writeToDB($username, $password, $email);
   }
 ?>
