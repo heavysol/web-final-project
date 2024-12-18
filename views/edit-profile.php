@@ -38,7 +38,7 @@
 
 				<br>
 
-				<button class = 'btn btn-light mx-auto d-block' name = 'login'> Edit profile </button>
+				<button class = 'btn btn-light mx-auto d-block' name = 'edit'> Edit profile </button>
 			</form>
 	</div>
 </body>
