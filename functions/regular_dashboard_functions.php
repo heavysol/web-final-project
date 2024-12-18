@@ -63,5 +63,7 @@
 
         $insertsql = "INSERT INTO users (username, `password`, email) VALUES ('$un', '$pass_hash','$email' WHERE email = '$email';";
         $result = $conn->query($insertsql);
+        echo 'Edit successful!';
+        redirect("Refresh:2; url=../views/regular_dashboard.php");
     }
 ?>
